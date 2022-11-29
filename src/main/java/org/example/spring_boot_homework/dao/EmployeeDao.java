@@ -25,7 +25,7 @@ public class EmployeeDao {
         return employees.get(id);
     }
 
-    public void patchEmployee(Integer id, Employee employee) {
-        employees.put(id, employee);
+    public void patchEmployee(Employee employee) {
+        employees.put(employee.getId(), employee);
     }
 }

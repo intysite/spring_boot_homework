@@ -30,8 +30,8 @@ public class MegaController {
         return employeeService.getEmployee(id);
     }
 
-    @PatchMapping(path = "/patch_employee/{id}")
-    public void patchEmployee(@PathVariable Integer id, @RequestBody EmployeeDtoRq employeeDtoRq) {
-        employeeService.patchEmployee(id, employeeDtoRq);
+    @PatchMapping(path = "/patch_employee")
+    public void patchEmployee(@RequestBody EmployeeDtoRq employeeDtoRq) {
+        employeeService.patchEmployee(employeeDtoRq);
     }
 }

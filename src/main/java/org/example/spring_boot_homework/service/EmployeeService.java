@@ -30,7 +30,7 @@ public class EmployeeService {
         return employeeDao.getEmployee(id);
     }
 
-    public void patchEmployee(Integer id, EmployeeDtoRq employeeDtoRq) {
-        employeeDao.patchEmployee(id, employeeMapper.convertEmployeeRq(employeeDtoRq));
+    public void patchEmployee(EmployeeDtoRq employeeDtoRq) {
+        employeeDao.patchEmployee(employeeMapper.convertEmployeeRq(employeeDtoRq));
     }
 }
